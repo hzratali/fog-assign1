@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="range"] {
+    overflow: hidden;
+    -webkit-appearance: none;
+    background-color: #f6f6f6;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 10px;
+    color: #3e3f3f;
+    margin-top: -1px;
+    background-color: #f6f6f6;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    width: 10px;
+    height: 10px;
+    -webkit-appearance: none;
+    background: #ffffff;
+    box-shadow: -80px 0 0 80px #ff0000;
+    position: relative;
+  }
+}
+
+/* FF */
+input[type="range"]::-moz-range-progress {
+  background-color: #ff0000; 
+}
+
+input[type="range"]::-moz-range-track {
+  background-color: #f6f6f6;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  cursor: ew-resize;
+  border: none;
+}
+
+/* IE */
+input[type="range"]::-ms-fill-lower {
+  background-color: #ff0000; 
+}
+
+input[type="range"]::-ms-fill-upper {
+  background-color: #f6f6f6;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  cursor: ew-resize;
+  border: none; 
+  border-radius: 50%; 
+}
